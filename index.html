@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Utah Hive News Spotlights — Utah Hive Politics</title>
+<meta name="description" content="Short spotlights on local news from around Utah, shared in the Sunday Buzz, with links to the outlets that reported each story.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cpolygon points='60,8 105,34 105,86 60,112 15,86 15,34' fill='%23111' stroke='%23FFC72C' stroke-width='8'/%3E%3Cpolygon points='60,44 74,52 74,68 60,76 46,68 46,52' fill='%23FFC72C'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+<div class="topbar"><span>Utah Hive News Spotlights · Utah Hive Politics · from the publisher of The Weber County Hive</span><a href="https://webercountyhive.substack.com/" target="_blank" rel="noopener">webercountyhive.substack.com ↗</a></div>
+<div class="band"><header class="masthead"><div class="mhead"><svg class="mark" viewBox="0 0 120 120" aria-hidden="true"><polygon points="60,4 108.5,32 108.5,88 60,116 11.5,88 11.5,32" fill="none" stroke="#111" stroke-opacity=".35" stroke-width="1.5"/><polygon points="60,16 98,38 98,82 60,104 22,82 22,38" fill="#111" stroke="#111" stroke-width="3"/><rect x="36" y="42" width="48" height="36" fill="#fff"/><rect x="40" y="46" width="40" height="6" fill="#111"/><rect x="40" y="56" width="18" height="3" fill="#111"/><rect x="40" y="62" width="18" height="3" fill="#111"/><rect x="40" y="68" width="18" height="3" fill="#111"/><polygon points="70,56 77,60 77,68 70,72 63,68 63,60" fill="#FFC72C" stroke="#111" stroke-width="1.5"/></svg><div>
+  <div class="eyebrow">Local news from around Utah</div>
+  <h1 class="title">Utah Hive News Spotlights</h1></div></div>
+  <p class="dek">Good things, local efforts and community news worth knowing about, from towns across Utah. New spotlights go out each week in the Sunday Buzz.</p>
+  <div class="dates">Page published <span data-site="pagePublished"></span> · Last updated <span class="upd" data-site="pageUpdated"></span></div>
+</header></div>
+
+<section>
+  <p class="plain"><b>IN PLAIN WORDS</b>Each spotlight is a short summary of published local news reports, with links to the outlets that reported the story so you can read the original. Spotlights are marked <strong>From local news reports</strong> because they are not the Hive&rsquo;s own public-records reporting. Readers can send in stories from their own towns.</p>
+  <div class="bar">
+    <input id="q" type="text" placeholder="Search by town, county, topic or name…" autocomplete="off" aria-label="Search spotlights">
+    <select id="county" aria-label="Filter by county"><option value="">All counties</option></select>
+    <div class="count" id="count"></div>
+  </div>
+  <div class="docket" id="docket"></div>
+  <div class="empty" id="empty" style="display:none;"><h3>Nothing matches that search</h3><div>Try a town or county name.</div></div>
+</section>
+
+<section id="submit">
+  <div class="two">
+    <div class="box dark"><h3>Send us your story</h3>
+      <p style="margin:0;">Something happening in your town that your neighbors should know about? A memorial, a volunteer effort, a local milestone, or a news story we should share? Send it in.</p>
+      <a class="email" href="mailto:webercountyhive@gmail.com?subject=News%20Spotlight">webercountyhive@gmail.com</a>
+      <p style="margin:6px 0 0;font-size:15px;">Put <strong>&ldquo;News Spotlight&rdquo;</strong> in the subject line. A link to a news story, or a few sentences in the body of the email, is all we need.</p></div>
+    <div class="box"><h3>How spotlights are put together</h3>
+      <ul style="margin:0;padding-left:20px;">
+        <li>Every spotlight links to the news reports it is based on.</li>
+        <li>Facts are taken from those reports, and quotes are checked against the original article.</li>
+        <li>Reader stories are checked before they go up. We don&rsquo;t publish home addresses or private details.</li>
+        <li>New spotlights run in the Sunday Buzz, then stay here.</li>
+      </ul></div>
+  </div>
+</section>
+
+<footer class="site-footer"><div class="wrap">
+  <h3>Utah Hive News Spotlights</h3><p style="color:var(--yellow);font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;">From Utah Hive Politics and The Weber County Hive</p>
+  <p>Short spotlights on local news from around Utah, shared in the Sunday Buzz. Each one is a summary of published news reports, linked to the outlets that reported it, and kept separate from the Hive&rsquo;s records-only case files.</p>
+  <p>Have a story from your town? Email <a href="mailto:webercountyhive@gmail.com?subject=News%20Spotlight">webercountyhive@gmail.com</a> with &ldquo;News Spotlight&rdquo; in the subject line.</p>
+  <div class="site-links"><a href="index.html">All spotlights</a><a href="index.html#submit">Send us a story</a></div>
+  <p style="margin-top:6px;">Across the Hive:</p>
+  <div class="site-links"><a href="https://weber-county-hive.github.io/-weber-county-hive-index/">Hive index</a><a href="https://weber-county-hive.github.io/sunday_buzz/">The Sunday Buzz</a><a href="https://weber-county-hive.github.io/Letters-Essays-to-the-Collective/">Letters &amp; Essays to the Collective</a><a href="https://weber-county-hive.github.io/candidates2026/">Candidates 2026</a><a href="https://weber-county-hive.github.io/candidates2026/weber-2026-voter-guide.html">Weber voter guide</a><a href="https://weber-county-hive.github.io/Bill-Tracker/">Bill Tracker</a><a href="https://weber-county-hive.github.io/pac/">PACs</a><a href="https://weber-county-hive.github.io/Transparency/">Transparency</a><a href="https://weber-county-hive.github.io/Unelected-Power/">Unelected Power</a><a href="https://weber-county-hive.github.io/utah-senators/">Utah Senators</a><a href="https://weber-county-hive.github.io/audits/">Audits</a><a href="https://weber-county-hive.github.io/committees/">Committees</a><a href="https://weber-county-hive.github.io/bait-and-switch/">Bait and Switch</a><a href="https://weber-county-hive.github.io/public-lands/">Public Lands</a><a href="https://weber-county-hive.github.io/Education/">Education</a></div>
+</div></footer>
+<script src="spotlights-data.js?v=1"></script>
+<script>
+document.querySelectorAll('[data-site]').forEach(el=>{el.textContent=SITE[el.dataset.site];});
+const docket=document.getElementById('docket'),q=document.getElementById('q'),sel=document.getElementById('county'),count=document.getElementById('count'),empty=document.getElementById('empty');
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+[...new Set(SPOTLIGHTS.map(s=>s.county))].sort().forEach(c=>{const o=document.createElement('option');o.value=c;o.textContent=c;sel.appendChild(o);});
+function card(s){
+  const dl=s.updated&&s.updated!==s.published?`Published ${esc(s.published)} · <strong>Updated ${esc(s.updated)}</strong>`:`Published ${esc(s.published)}`;
+  return `<a class="card" href="${esc(s.link)}"><div class="row"><span>${esc(s.county)}${s.city?' · '+esc(s.city):''}</span><span>${esc(s.topic)}</span></div><span class="badge ${s.from==='reader'?'rdr':''}">${s.from==='reader'?'Sent in by a reader':'From local news reports'}</span><h2>${esc(s.title)}</h2><p>${esc(s.summary)}</p><div class="meta">Reported by ${esc((s.sources||[]).join(', '))}${s.buzz?' · Sunday Buzz, '+esc(s.buzz):''}</div><div class="meta">${dl}</div></a>`;
+}
+function render(){
+  const t=q.value.trim().toLowerCase(),c=sel.value;
+  const list=SPOTLIGHTS.filter(s=>(!c||s.county===c)&&(!t||[s.title,s.county,s.city,s.topic,s.summary,(s.sources||[]).join(' ')].join(' ').toLowerCase().includes(t)));
+  docket.innerHTML=list.map(card).join('');
+  empty.style.display=list.length?'none':'block';
+  count.textContent=`${SPOTLIGHTS.length} spotlight${SPOTLIGHTS.length===1?'':'s'}`+(list.length!==SPOTLIGHTS.length?` · showing ${list.length}`:'');
+}
+q.addEventListener('input',render);sel.addEventListener('change',render);render();
+</script>
+</body>
+</html>
