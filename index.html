@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Utah Hive News Spotlights — Utah Hive Politics</title>
-<meta name="description" content="Short spotlights on local news from around Utah, shared in the Sunday Buzz, with links to the outlets that reported each story.">
+<meta name="description" content="Short spotlights on local news from around Utah, shared in the Sunday Buzz, many sent in by readers.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cpolygon points='60,8 105,34 105,86 60,112 15,86 15,34' fill='%23111' stroke='%23FFC72C' stroke-width='8'/%3E%3Cpolygon points='60,44 74,52 74,68 60,76 46,68 46,52' fill='%23FFC72C'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css?v=1">
@@ -19,7 +19,7 @@
 </header></div>
 
 <section>
-  <p class="plain"><b>IN PLAIN WORDS</b>Each spotlight is a short summary of published local news reports, with links to the outlets that reported the story so you can read the original. Spotlights are marked <strong>From local news reports</strong> because they are not the Hive&rsquo;s own public-records reporting. Readers can send in stories from their own towns.</p>
+  <p class="plain"><b>IN PLAIN WORDS</b>Spotlights share good things, local efforts and community news from towns across Utah. Many are sent in by readers; some come from local news reports. Each one is marked with where it came from and links to anything published about it, so you can read more. Spotlights are not the Hive&rsquo;s own public-records reporting.</p>
   <div class="bar">
     <input id="q" type="text" placeholder="Search by town, county, topic or name…" autocomplete="off" aria-label="Search spotlights">
     <select id="county" aria-label="Filter by county"><option value="">All counties</option></select>
@@ -34,11 +34,13 @@
     <div class="box dark"><h3>Send us your story</h3>
       <p style="margin:0;">Something happening in your town that your neighbors should know about? A memorial, a volunteer effort, a local milestone, or a news story we should share? Send it in.</p>
       <a class="email" href="mailto:webercountyhive@gmail.com?subject=News%20Spotlight">webercountyhive@gmail.com</a>
-      <p style="margin:6px 0 0;font-size:15px;">Put <strong>&ldquo;News Spotlight&rdquo;</strong> in the subject line. A link to a news story, or a few sentences in the body of the email, is all we need.</p></div>
+      <p style="margin:6px 0 0;font-size:15px;">Put <strong>&ldquo;News Spotlight&rdquo;</strong> in the subject line. A few sentences in the body of the email, or a link to a news story, is all we need to start. We&rsquo;ll write back to ask if you&rsquo;d like to tell us more.</p></div>
     <div class="box"><h3>How spotlights are put together</h3>
       <ul style="margin:0;padding-left:20px;">
-        <li>Every spotlight links to the news reports it is based on.</li>
-        <li>Facts are taken from those reports, and quotes are checked against the original article.</li>
+        <li>Every spotlight says where it came from: sent in by a reader, or from local news reports.</li>
+        <li>Where something has been published about the story, the spotlight links to it.</li>
+        <li>When a reader sends a story, we write back to ask if they&rsquo;d like to add more: background, photos, or anything else they want neighbors to know.</li>
+        <li>Facts and quotes are checked before a spotlight goes up.</li>
         <li>Reader stories are checked before they go up. We don&rsquo;t publish home addresses or private details.</li>
         <li>New spotlights run in the Sunday Buzz, then stay here.</li>
       </ul></div>
@@ -47,7 +49,7 @@
 
 <footer class="site-footer"><div class="wrap">
   <h3>Utah Hive News Spotlights</h3><p style="color:var(--yellow);font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;">From Utah Hive Politics and The Weber County Hive</p>
-  <p>Short spotlights on local news from around Utah, shared in the Sunday Buzz. Each one is a summary of published news reports, linked to the outlets that reported it, and kept separate from the Hive&rsquo;s records-only case files.</p>
+  <p>Short spotlights on local news from around Utah, shared in the Sunday Buzz. Many are sent in by readers. Each one says where it came from, links to anything published about it, and is kept separate from the Hive&rsquo;s records-only case files.</p>
   <p>Have a story from your town? Email <a href="mailto:webercountyhive@gmail.com?subject=News%20Spotlight">webercountyhive@gmail.com</a> with &ldquo;News Spotlight&rdquo; in the subject line.</p>
   <div class="site-links"><a href="index.html">All spotlights</a><a href="index.html#submit">Send us a story</a></div>
   <p style="margin-top:6px;">Across the Hive:</p>
@@ -61,7 +63,7 @@ function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','
 [...new Set(SPOTLIGHTS.map(s=>s.county))].sort().forEach(c=>{const o=document.createElement('option');o.value=c;o.textContent=c;sel.appendChild(o);});
 function card(s){
   const dl=s.updated&&s.updated!==s.published?`Published ${esc(s.published)} · <strong>Updated ${esc(s.updated)}</strong>`:`Published ${esc(s.published)}`;
-  return `<a class="card" href="${esc(s.link)}"><div class="row"><span>${esc(s.county)}${s.city?' · '+esc(s.city):''}</span><span>${esc(s.topic)}</span></div><span class="badge ${s.from==='reader'?'rdr':''}">${s.from==='reader'?'Sent in by a reader':'From local news reports'}</span><h2>${esc(s.title)}</h2><p>${esc(s.summary)}</p><div class="meta">Reported by ${esc((s.sources||[]).join(', '))}${s.buzz?' · Sunday Buzz, '+esc(s.buzz):''}</div><div class="meta">${dl}</div></a>`;
+  return `<a class="card" href="${esc(s.link)}"><div class="row"><span>${esc(s.county)}${s.city?' · '+esc(s.city):''}</span><span>${esc(s.topic)}</span></div><span class="badge ${s.from==='reader'?'rdr':''}">${s.from==='reader'?'Sent in by a reader':'From local news reports'}</span><h2>${esc(s.title)}</h2><p>${esc(s.summary)}</p><div class="meta">${(s.sources||[]).length?'Also reported by '+esc(s.sources.join(', ')):''}${s.buzz?' · Sunday Buzz, '+esc(s.buzz):''}</div><div class="meta">${dl}</div></a>`;
 }
 function render(){
   const t=q.value.trim().toLowerCase(),c=sel.value;

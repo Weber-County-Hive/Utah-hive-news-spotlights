@@ -7,9 +7,9 @@
 // city:      town, or ""
 // topic:     short topic label (e.g. "Veterans", "Schools", "Water")
 // summary:   one or two sentences
-// sources:   outlets the spotlight is based on, e.g. ["KSL", "FOX 13"]
+// sources:   news outlets that have also reported the story, e.g. ["KSL", "FOX 13"] ([] if none)
 // buzz:      Sunday Buzz issue date it ran in, e.g. "Oct. 4, 2026" ("" if not yet)
-// from:      "hive" (Hive pick) or "reader" (reader-submitted story)
+// from:      "reader" (sent in by a reader) or "news" (from local news reports)
 // published: date it first went up, e.g. "Oct 4, 2026"
 // updated:   date of the latest change (same as published if never changed)
 
@@ -18,7 +18,7 @@ const SITE = {
   pagePublished: "Oct 4, 2026",
   pageUpdated: "Oct 4, 2026",
   email: "webercountyhive@gmail.com",
-  submitHow: "Email webercountyhive@gmail.com with “News Spotlight” in the subject line. Send a link to a local news story, or tell us about something happening in your town in the body of the email (no attachments needed)."
+  submitHow: "Email webercountyhive@gmail.com with “News Spotlight” in the subject line. Send a link to a local news story, or tell us about something happening in your town in the body of the email (no attachments needed). We’ll write back to ask if you’d like to tell us more."
 };
 
 const SPOTLIGHTS = [
@@ -31,7 +31,7 @@ const SPOTLIGHTS = [
     summary: "Larry Kerr of Syracuse and the Utah Agent Orange Veterans Foundation are finishing a memorial at Sunset City Veterans Memorial Park. An unveiling is tentatively planned for Veterans Day.",
     sources: ["KSL", "FOX 13"],
     buzz: "Oct. 4, 2026",
-    from: "hive",
+    from: "reader",
     published: "Oct 4, 2026",
     updated: "Oct 4, 2026",
     link: "sunset-agent-orange-memorial.html"

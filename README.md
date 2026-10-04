@@ -1,6 +1,6 @@
 # Utah Hive News Spotlights
 
-Short spotlights on local news from around Utah, shared each week in the Sunday Buzz.
+Short spotlights on local news from around Utah, shared each week in the Sunday Buzz. Many are sent in by readers.
 From Utah Hive Politics · from the publisher of The Weber County Hive.
 
 Live site (after GitHub Pages is turned on): https://weber-county-hive.github.io/Utah-Hive-News-Spotlights/
