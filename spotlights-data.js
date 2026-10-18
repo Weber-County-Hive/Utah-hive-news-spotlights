@@ -16,12 +16,26 @@
 const SITE = {
   name: "Utah Hive News Spotlights",
   pagePublished: "Oct 4, 2026",
-  pageUpdated: "Oct 4, 2026",
+  pageUpdated: "Oct 18, 2026",
   email: "webercountyhive@gmail.com",
   submitHow: "Email webercountyhive@gmail.com with “News Spotlight” in the subject line. Send a link to a local news story, or tell us about something happening in your town in the body of the email (no attachments needed). We’ll write back to ask if you’d like to tell us more."
 };
 
 const SPOTLIGHTS = [
+  {
+    id: "pineview-history-surfaces",
+    title: "With Pineview Drawn Down, the Wells That Once Watered Ogden Are Showing Again",
+    county: "Weber County",
+    city: "Huntsville",
+    topic: "History",
+    summary: "Ogden's pipeline project has lowered Pineview Reservoir to some of its lowest levels in decades, uncovering pipes, wood and an old intake from the artesian wells that supplied the city's water starting around 1914.",
+    sources: ["KSL", "The Ogden Valley News", "The Salt Lake Tribune"],
+    buzz: "Oct. 18, 2026",
+    from: "news",
+    published: "Oct 18, 2026",
+    updated: "Oct 18, 2026",
+    link: "pineview-history-surfaces.html"
+  },
   {
     id: "sunset-agent-orange-memorial",
     title: "A Memorial to Vietnam Veterans Exposed to Agent Orange Nears Completion in Sunset",
@@ -33,7 +47,7 @@ const SPOTLIGHTS = [
     buzz: "Oct. 4, 2026",
     from: "reader",
     published: "Oct 4, 2026",
-    updated: "Oct 4, 2026",
+    updated: "Oct 17, 2026",
     link: "sunset-agent-orange-memorial.html"
   }
 ];
